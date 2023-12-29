@@ -1,4 +1,3 @@
 service : {
   greet: (text) -> (text) query;
-  qsort: (vec int) -> (vec int);
 }
