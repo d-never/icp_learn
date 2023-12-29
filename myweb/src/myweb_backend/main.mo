@@ -32,11 +32,6 @@ actor {
   };
   public func qsort(arr:[Int]) : async [Int]{
     let len = arr.size();
-    // let arr_v = Buffer.Buffer<Int>(len);
-    // for (i in arr.vals()){
-    //   arr_v.add(i);
-    // };
-    // let arr_s = Buffer.toArray(arr_v);
     let arr_s = Array.thaw<Int>(arr);
     quicksort(arr_s,0,len-1);
     Array.freeze<Int>(arr_s);
