@@ -1,0 +1,8 @@
+// Version: 1.0.0
+type List<T> = ?(T, List<T>);
+type Time = Int;
+actor {
+  stable var followed : ?(Principal, List<Principal>);
+  stable var messages :
+    ?({text : Text; time : Time}, List<{text : Text; time : Time}>)
+};
